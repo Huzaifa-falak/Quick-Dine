@@ -1,0 +1,3 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import RestaurantCard from "../RestaurantCard.tsx";
+export default function TrendingRow({restaurants=[]}:{restaurants:any[]}){return <section className="max-w-7xl mx-auto px-6 md:px-10 py-14"><div className="flex items-end justify-between mb-8"><div><p className="text-[10px] tracking-widest uppercase text-secondary">Curated for you</p><h2 className="font-display text-2xl md:text-3xl text-primary">Trending Dining Rooms</h2></div></div>{restaurants.length?<div className="grid grid-cols-1 md:grid-cols-3 gap-6">{restaurants.map(r=><RestaurantCard key={r._id} restaurant={r}/>)}</div>:<p className="text-sm text-black/50">New experiences are being curated.</p>}</section>}
